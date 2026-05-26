@@ -2,25 +2,25 @@ import { useGameConfig } from "../store/gameConfig";
 
 const SHELLS = [
   {
-    id: "shell_5x3_243ways",
-    name: "5x3 — 243 Ways",
+    id:          "shell_5x3_243ways",
+    name:        "5x3 — 243 Ways",
     description: "Classic 5 reel, 3 row layout with 243 payways. Most popular format.",
-    status: "ready",
-    tag: "Sprint 1"
+    status:      "ready",
+    tag:         "Sprint 1"
   },
   {
-    id: "shell_5x3_holdwin",
-    name: "5x3 — Hold & Win",
-    description: "Bonus round where collected symbols lock in place for re-spins.",
-    status: "coming",
-    tag: "Sprint 2"
+    id:          "shell_5x3_holdwin",
+    name:        "5x3 — Hold & Win",
+    description: "Collect symbols lock in place, triggering re-spins. Fill the grid for a Grand Jackpot.",
+    status:      "ready",
+    tag:         "Sprint 2"
   },
   {
-    id: "shell_5x3_bonusgame",
-    name: "5x3 — Bonus Game",
+    id:          "shell_5x3_bonusgame",
+    name:        "5x3 — Bonus Game",
     description: "Scatter-triggered free spins with multiplier trails.",
-    status: "coming",
-    tag: "Sprint 3"
+    status:      "coming",
+    tag:         "Sprint 3"
   }
 ];
 
@@ -32,7 +32,7 @@ export default function ShellPicker() {
       <div>
         <h2 className="text-2xl font-bold text-white">Choose a Shell</h2>
         <p className="text-white/50 text-sm mt-1">
-          The shell defines the reel layout and core mechanics. Pick one to start.
+          The shell defines the reel layout and core mechanics.
         </p>
       </div>
 
@@ -52,7 +52,7 @@ export default function ShellPicker() {
               ${config.shell === shell.id
                 ? "border-yellow-500/70 bg-yellow-500/10"
                 : shell.status === "ready"
-                  ? "border-white/20 bg-white/5 hover:border-white/40"
+                  ? "border-white/20 bg-white/5 hover:border-white/40 hover:bg-white/8"
                   : "border-white/10 bg-white/3 opacity-50 cursor-not-allowed"
               }
             `}
@@ -68,6 +68,9 @@ export default function ShellPicker() {
               </span>
             </div>
             <p className="text-sm text-white/50">{shell.description}</p>
+            {config.shell === shell.id && (
+              <p className="text-xs text-yellow-400 mt-2">✓ Selected</p>
+            )}
           </button>
         ))}
       </div>
@@ -76,7 +79,7 @@ export default function ShellPicker() {
         onClick={() => setStep(2)}
         disabled={!config.shell}
         className="w-full py-3 bg-yellow-500 hover:bg-yellow-400 disabled:opacity-40
-                   text-black font-bold rounded-xl"
+                   text-black font-bold rounded-xl transition-colors"
       >
         Next: Theme Studio →
       </button>

@@ -1,0 +1,43 @@
+{
+  "game_title": "{{game_title}}",
+  "shell": "shell_5x3_holdwin",
+  "grid": { "cols": 5, "rows": 3 },
+  "holdwin": {
+    "respins": 3,
+    "collect_symbol": "SCAT",
+    "jackpots": {
+      "mini":  { "count": 6,  "multiplier": 10  },
+      "minor": { "count": 9,  "multiplier": 25  },
+      "major": { "count": 12, "multiplier": 100 },
+      "grand": { "count": 15, "multiplier": 500 }
+    }
+  },
+  "assets": {
+    "background": "{{assets.background}}",
+    "symbols": {
+      "HP1": "{{assets.symbols.HP1}}",
+      "HP2": "{{assets.symbols.HP2}}",
+      "LP1": "{{assets.symbols.LP1}}",
+      "LP2": "{{assets.symbols.LP2}}",
+      "LP3": "{{assets.symbols.LP3}}",
+      "LP4": "{{assets.symbols.LP4}}",
+      "WILD": "{{assets.symbols.WILD}}",
+      "SCAT": "{{assets.symbols.SCAT}}"
+    },
+    "bgm": "{{assets.bgm}}",
+    "sfx": {
+      "spin":          "{{assets.sfx.spin}}",
+      "stop":          "{{assets.sfx.stop}}",
+      "win_small":     "{{assets.sfx.win_small}}",
+      "win_big":       "{{assets.sfx.win_big}}",
+      "bonus_trigger": "{{assets.sfx.bonus_trigger}}"
+    }
+  },
+  "ui": {
+    "primaryColor": "{{ui.primaryColor}}",
+    "accentColor":  "{{ui.accentColor}}",
+    "glowColor":    "{{ui.glowColor}}",
+    "fontFamily":   "{{ui.fontFamily}}"
+  },
+  "demo": { "mode": "scripted", "sequence": [] }
+}
