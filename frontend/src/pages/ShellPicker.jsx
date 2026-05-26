@@ -18,8 +18,8 @@ const SHELLS = [
   {
     id:          "shell_5x3_bonusgame",
     name:        "5x3 — Bonus Game",
-    description: "Scatter-triggered free spins with multiplier trails.",
-    status:      "coming",
+    description: "3+ scatters trigger free spins. Multiplier grows with each winning spin. Re-triggerable.",
+    status:      "ready",
     tag:         "Sprint 3"
   }
 ];
